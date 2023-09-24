@@ -52,5 +52,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          artifact: docs
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: docs
