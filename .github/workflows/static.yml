@@ -41,8 +41,8 @@ jobs:
       - name: Install Sphinx and Build Docs
         run: |
           pip install sphinx
-          pip install sphinx-rtd-theme # Opcional, use um tema Sphinx se desejar
-          sphinx-build -b html docs/ docs/_build/
+          pip install sphinx-press-theme
+          sphinx-build -b html documentation/ docs/_build/
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
