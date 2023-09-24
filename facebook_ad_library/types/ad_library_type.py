@@ -1,0 +1,2 @@
+class AdLibraryType:
+    pass
