@@ -8,8 +8,9 @@ package = "facebook_ad_library"
 [project]
 name = "facebook_ad_library"
 authors = [
-    {name = "Henrique da Silva Santos", email = "rique_dev@hotmail.com"},
+    {name = "Henrique da Silva Santos", email = "rique_dev@hotmail.com"}
 ]
+description = "A Python SDK for accessing Facebook's Ad Library, providing comprehensive insights into advertisements across Facebook's network of platforms."
 requires-python = ">=3.5"
 license = { file = "LICENSE" }
 classifiers = [
@@ -19,17 +20,17 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.9"
 ]
-dynamic = ["version", "description"]
+dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://flit.pypa.io"
-Source = "https://github.com/pypa/flit"
+Documentation = "https://riquedev.github.io/FacebookADLibrary/"
+Source = "https://github.com/riquedev/FacebookADLibrary/"
 
 [project.optional-dependencies]
 test = [
     "pytest >=2.7.3",
-    "pytest-cov",
+    "pytest-cov"
 ]
 doc = ["sphinx"]
