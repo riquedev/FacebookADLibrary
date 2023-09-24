@@ -42,7 +42,7 @@ jobs:
         run: |
           pip install sphinx
           pip install sphinx-press-theme
-          sphinx-build -b html documentation/ docs/_build/
+          sphinx-build -b html documentation/source/ docs/_build/
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
