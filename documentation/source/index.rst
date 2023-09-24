@@ -6,9 +6,6 @@
 Welcome to facebook_ad_library's Documentation!
 ===============================================
 
-Contents
---------
-
 .. toctree::
    :maxdepth: 2
    :caption: Table of Contents
