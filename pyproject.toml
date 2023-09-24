@@ -34,3 +34,7 @@ test = [
     "pytest-cov"
 ]
 doc = ["sphinx"]
+
+[tool.setuptools.dynamic]
+version = {attr = "facebook_ad_library.VERSION"}
+readme = {file = ["README.md"]}
