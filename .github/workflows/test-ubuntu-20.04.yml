@@ -32,4 +32,4 @@ jobs:
       env:
         FACEBOOK_TOKEN: ${{ secrets.FACEBOOK_TOKEN }}
       run: |
-        python -m unittest
+        python -m unittest -v

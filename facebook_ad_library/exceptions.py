@@ -1,3 +1,4 @@
+import copy
 from dataclasses import dataclass, field
 
 
@@ -14,8 +15,10 @@ class ExceptionData:
 
 class OAuthException(Exception):
     error: ExceptionData = None
+    raw: dict = None
 
     def __init__(self, error: dict, *args, **kwargs):
+        self.raw = copy.copy(error)
         if "type" in error:
             del error["type"]
         self.error = ExceptionData(**error)
