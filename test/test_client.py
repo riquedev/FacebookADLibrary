@@ -24,12 +24,12 @@ class TestClient(unittest.TestCase):
 
     def test_oauth_exception(self):
         with self.assertRaises(OAuthException):
-            with open("../mock/empty-search.json") as handler:
+            with open(EMPTY_SEARCH) as handler:
                 response = json.load(handler)
                 raise exceptions[response['type']](response)
 
     def test_basic_search(self):
-        with open("../mock/basic-search.json") as handler:
+        with open(BASIC_SEARCH) as handler:
             response = json.load(handler)
             self.assertIsInstance(response, dict)
             data = response.get('data', [])
@@ -41,7 +41,7 @@ class TestClient(unittest.TestCase):
                 self.assertEqual(['id'], list(keys))
 
     def test_fields_search(self):
-        with open("../mock/fields-search.json") as handler:
+        with open(FIELDS_SEARCH) as handler:
             items = fields.__all__
 
             fields_list = [
