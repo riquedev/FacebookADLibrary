@@ -18,7 +18,6 @@ class OAuthException(Exception):
     def __init__(self, error: dict, *args, **kwargs):
         if "type" in error:
             del error["type"]
-        print(error)
         self.error = ExceptionData(**error)
         super().__init__(
             f"{self.error.message}\n{self.error.error_user_title}: {self.error.error_user_msg}"

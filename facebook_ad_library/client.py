@@ -1,8 +1,8 @@
 from typing import List
 import requests
-
 from facebook_ad_library import fields, types
 from facebook_ad_library.exceptions import exceptions
+from facebook_ad_library.config import FACEBOOK_TOKEN
 
 
 class FacebookAdsLibrary:
@@ -21,9 +21,10 @@ class FacebookAdsLibrary:
     api_url = None
     session = requests.Session()
 
-    def __init__(self, access_token: str,
+    def __init__(self, access_token: str = FACEBOOK_TOKEN,
                  api_version: str = "v14.0",
                  ):
+        assert access_token != "" and access_token is not None
         """
             Initializes an instance of the FacebookAdsLibrary class.
 

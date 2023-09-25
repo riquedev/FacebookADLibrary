@@ -29,5 +29,7 @@ jobs:
         python -m pip install --upgrade pip        
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
+      env:
+        FACEBOOK_TOKEN: ${{ secrets.FACEBOOK_TOKEN }}
       run: |
         python -m unittest
