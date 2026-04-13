@@ -30,7 +30,7 @@ Source = "https://github.com/riquedev/FacebookADLibrary/"
 
 [project.optional-dependencies]
 test = [
-    "pytest >=2.7.3",
+    "pytest >=8.4.2",
     "pytest-cov"
 ]
 doc = ["sphinx"]
